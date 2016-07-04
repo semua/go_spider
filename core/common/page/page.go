@@ -85,7 +85,7 @@ func (this *Page) SetStatus(isfail bool, errormsg string) {
 }
 
 // AddField saves KV string pair to PageItems preparing for Pipeline
-func (this *Page) AddField(key string, value string) {
+func (this *Page) AddField(key string, value interface{}) {
 	this.pItems.AddItem(key, value)
 }
 
