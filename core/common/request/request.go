@@ -96,6 +96,8 @@ func readHeaderFromFile(headerFile string) http.Header {
 	h.Add("Cookie", js.Get("Cookie").MustString())
 	h.Add("Cache-Control", "max-age=0")
 	h.Add("Connection", "keep-alive")
+	h.Add("Content-Length", js.Get("Content-Length").MustString())
+	h.Add("Content-Type", js.Get("Content-Type").MustString())
 	return h
 }
 
